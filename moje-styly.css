@@ -1,1 +1,59 @@
 /* Do tohoto souboru piš vlastní styly */
+code::before {
+    content: "$";
+    opacity: 0.5;
+    padding-right: 8px;
+    /* position: relative;
+    left: -8px; takto ale bude vyjíždět doleva z toho pole, kde má být */
+}
+
+
+h1::before, h2::before {
+    content: "";
+    display: inline-block;
+    background-color: #FfAAff;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    margin-right: 0.2em;
+    margin-bottom: 0;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+}
+
+
+
+/*`“` do pravého horního rohu */
+blockquote::before {
+    content: "„";
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    font-size: 5em;
+    color: black;
+    opacity: 20%;
+    /* margin-right: 10px; */
+}
+
+/* `„` do levého dolního rohu */
+blockquote::after {
+    content: "“";
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 5em;
+    color: black;
+    opacity: 20%;
+    /* margin-left: 10px; */
+}
+
+blockquote {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 10px;
+}
+
